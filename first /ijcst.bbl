@@ -1,0 +1,1641 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{He2016}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HY}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Yan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=MWJ}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Wei\bibnamedelima Jin},
+         giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=ZJP}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Ji\bibnamedelima Ping},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HYMWJZJP1}
+    \strng{fullhash}{HYMWJZJP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The particle swarm optimization (PSO) is an optimization algorithm based on
+  intelligent optimization. Parameters selection of PSO will play an important
+  role in performance and efficiency of the algorithm. In this paper, the
+  performance of PSO is analyzed when the control parameters vary, including
+  particle number, accelerate constant, inertia weight and maximum limited
+  velocity. And then PSO with dynamic parameters has been applied on the neural
+  network training for gearbox fault diagnosis, the results with different
+  parameters of PSO are compared and analyzed. At last some suggestions for
+  parameters selection are proposed to improve the performance of PSO.%
+    }
+    \verb{doi}
+    \verb 10.1051/matecconf/20166302019
+    \endverb
+    \field{number}{2016}
+    \field{pages}{02019}
+    \field{title}{{The Parameters Selection of PSO Algorithm influencing On
+  performance of Fault Diagnosis}}
+    \field{volume}{63}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/hyperparameter opt/pso NN.pdf
+    \verb :pdf
+    \endverb
+    \field{journaltitle}{MATEC Web of Conferences}
+    \field{year}{2016}
+  \endentry
+
+  \entry{Ahmad2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AHM}{%
+         family={Ahmad},
+         familyi={A\bibinitperiod},
+         given={Hafiz\bibnamedelima Mughees},
+         giveni={H\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Ghuffar},
+         familyi={G\bibinitperiod},
+         given={Sajid},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Khurshid},
+         familyi={K\bibinitperiod},
+         given={Khurram},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{AlexNet,Breast Cancer,Deep learning,GoogleNet,ResNet,clinical
+  importance of early diagnosis}
+    \strng{namehash}{AHMGSKK1}
+    \strng{fullhash}{AHMGSKK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Breast Cancer is a most common form of cancer among women and life taking
+  disease around the globe. Histopathological imaging is one of the methods for
+  cancer diagnosis where Pathologists examine tissue cells under different
+  microscopic standards but disagree on the final decision. This is a tiresome
+  task and for that reason, Deep Neural Networks are being used for the
+  supervised classification. We have used Breast Histology dataset having 240
+  training and 20 test images for classification of the histology images among
+  four classes, i.e. Normal, Benign, In-situ carcinoma and Invasive carcinoma.
+  The dataset was preprocessed for proper classification. We have applied
+  transfer learning based on AlexNet, GoogleNet, and ResNet that can classify
+  images at multiple cellular and nuclei configurations. This approach has
+  resulted in 85{\%} accuracy in case of ResNet as the highest among others and
+  further research is being done to increase its efficiency and reduce the
+  human dependency. The proposed design can also be enhanced for automation of
+  other medical imaging methods.%
+    }
+    \verb{doi}
+    \verb 10.1109/IBCAST.2019.8667221
+    \endverb
+    \verb{eprint}
+    \verb 1802.09424
+    \endverb
+    \field{isbn}{9781538677292}
+    \field{pages}{328\bibrangedash 332}
+    \field{title}{{Classification of Breast Cancer Histology Images Using
+  Transfer Learning}}
+    \field{journaltitle}{Proceedings of 2019 16th International Bhurban
+  Conference on Applied Sciences and Technology, IBCAST 2019}
+    \field{annotation}{%
+    Breast cancer is one of the leading causes of mortality in women. Early
+  detection and treatment are imperative for improving sur- vival rates, which
+  have steadily increased in recent years as a result of more sophisticated
+  computer-aided-diagnosis (CAD) systems.%
+    }
+    \field{eprinttype}{arXiv}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Pimkin2018}{article}{}
+    \name{author}{6}{}{%
+      {{hash=PA}{%
+         family={Pimkin},
+         familyi={P\bibinitperiod},
+         given={Artem},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={Makarchuk},
+         familyi={M\bibinitperiod},
+         given={Gleb},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Kondratenko},
+         familyi={K\bibinitperiod},
+         given={Vladimir},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pisov},
+         familyi={P\bibinitperiod},
+         given={Maxim},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KE}{%
+         family={Krivov},
+         familyi={K\bibinitperiod},
+         given={Egor},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Belyaev},
+         familyi={B\bibinitperiod},
+         given={Mikhail},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{Convolutional networks,Digital pathology,Ensembles,resolution
+  constraint}
+    \strng{namehash}{PA+1}
+    \strng{fullhash}{PAMGKVPMKEBM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In the last years, neural networks have proven to be a powerful framework
+  for various image analysis problems. However, some application domains have
+  specific limitations. Notably, digital pathology is an example of such fields
+  due to tremendous image sizes and quite limited number of training examples
+  available. In this paper, we adopt state-of-the-art convolutional neural
+  networks (CNN) architectures for digital pathology images analysis. We
+  propose to classify image patches to increase effective sample size and then
+  to apply an ensembling technique to build prediction for the original images.
+  To validate the developed approaches, we conducted experiments with
+  $\backslash$textit{\{}Breast Cancer Histology Challenge{\}} dataset and
+  obtained 90$\backslash${\%} accuracy for the 4-class tissue classification
+  task.%
+    }
+    \verb{doi}
+    \verb 10.1007/978-3-319-93000-8_100
+    \endverb
+    \verb{eprint}
+    \verb arXiv:1802.00947v1
+    \endverb
+    \field{isbn}{9783319929996}
+    \field{issn}{16113349}
+    \field{pages}{877\bibrangedash 886}
+    \field{title}{{Ensembling Neural Networks for Digital Pathology Images
+  Classification and Segmentation}}
+    \field{volume}{10882 LNCS}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/Preprossing/preprocessing{\_}
+    \verb no{\_}good.pdf:pdf
+    \endverb
+    \field{journaltitle}{Lecture Notes in Computer Science (including subseries
+  Lecture Notes in Artificial Intelligence and Lecture Notes in
+  Bioinformatics)}
+    \field{eprinttype}{arXiv}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Cao2018}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CH}{%
+         family={Cao},
+         familyi={C\bibinitperiod},
+         given={Hongliu},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Bernard},
+         familyi={B\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HL}{%
+         family={Heutte},
+         familyi={H\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Sabourin},
+         familyi={S\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{Breast cancer,Deep learning,Dissimilarity,High dimensional low sample
+  size,Multi-view,Random forest,Transfer learning,difficulty of histology
+  images classification,iimportance of automated classification}
+    \strng{namehash}{CH+1}
+    \strng{fullhash}{CHBSHLSR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Breast cancer is one of the most common types of cancer and leading
+  cancer-related death causes for women. In the context of ICIAR 2018 Grand
+  Challenge on Breast Cancer Histology Images, we compare one handcrafted
+  feature extractor and five transfer learning feature extractors based on deep
+  learning. We find out that the deep learning networks pretrained on ImageNet
+  have better performance than the popular handcrafted features used for breast
+  cancer histology images. The best feature extractor achieves an average
+  accuracy of 79.30{\%}. To improve the classification performance, a random
+  forest dissimilarity based integration method is used to combine different
+  feature groups together. When the five deep learning feature groups are
+  combined, the average accuracy is improved to 82.90{\%} (best accuracy
+  85.00{\%}). When handcrafted features are combined with the five deep
+  learning feature groups, the average accuracy is improved to 87.10{\%} (best
+  accuracy 93.00{\%}).%
+    }
+    \verb{doi}
+    \verb 10.1007/978-3-319-93000-8_88
+    \endverb
+    \verb{eprint}
+    \verb arXiv:1803.11241v1
+    \endverb
+    \field{isbn}{9783319929996}
+    \field{issn}{16113349}
+    \field{pages}{779\bibrangedash 787}
+    \field{title}{{Improve the Performance of Transfer Learning Without
+  Fine-Tuning Using Dissimilarity-Based Multi-view Learning for Breast Cancer
+  Histology Images}}
+    \field{volume}{10882 LNCS}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/transfer learning papers/Impr
+    \verb ove the performance of transfer learningwithout fine-tuning.pdf:pdf
+    \endverb
+    \field{journaltitle}{Lecture Notes in Computer Science (including subseries
+  Lecture Notes in Artificial Intelligence and Lecture Notes in
+  Bioinformatics)}
+    \field{eprinttype}{arXiv}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Brancati2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BN}{%
+         family={Brancati},
+         familyi={B\bibinitperiod},
+         given={Nadia},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=DG}{%
+         family={{De Pietro}},
+         familyi={D\bibinitperiod},
+         given={Giuseppe},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Frucci},
+         familyi={F\bibinitperiod},
+         given={Maria},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Riccio},
+         familyi={R\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \keyw{Breast cancer,Deep learning,Feature
+  extraction,Hematoxylin-and-Eosin-stained-histological-images,Histological
+  images,Image reconstruction,Task analysis,Training,Tumors,automatic image
+  analysis techniques,biological organs,biological tissues,biomedical optical
+  imaging,breast cancer,breast histological images,breast invasive ductal
+  carcinoma detection,cancer,cancer structures-subtypes,cancer tissue,cellular
+  biophysics,classification task,clinical importance of early
+  diagnosis,convolutional autoencoder network,convolutional neural nets,deep
+  learning,deep learning approach,deep neural networks,detection,detection
+  task,digital histological images,feature extraction,image
+  classification,learning (artificial intelligence),lymphoma
+  multiclassification,lymphoma sub-types,mammography,medical image
+  processing,multi-classification,residual convolutional neural network}
+    \strng{namehash}{BN+1}
+    \strng{fullhash}{BNDGFMRD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Accurately identifying and categorizing cancer structures/sub-types in
+  histological images is an important clinical task involving a considerable
+  workload and a specific subspecialty of pathologists. Digitizing pathology is
+  a current trend that provides large amounts of visual data allowing a faster
+  and more precise diagnosis through the development of automatic image
+  analysis techniques. Recent studies have shown promising results for the
+  automatic analysis of cancer tissue by using deep learning strategies that
+  automatically extract and organize the discriminative information from the
+  data. This paper explores deep learning methods for the automatic analysis of
+  Hematoxylin and Eosin stained histological images of breast cancer and
+  lymphoma. In particular, a deep learning approach is proposed for two
+  different use cases: the detection of invasive ductal carcinoma in breast
+  histological images and the classification of lymphoma sub-types. Both use
+  cases have been addressed by adopting a residual convolutional neural network
+  that is part of a convolutional autoencoder network (i.e., FusionNet). The
+  performances have been evaluated on the public datasets of digital
+  histological images and have been compared with those obtained by using
+  different deep neural networks (UNet and ResNet). Additionally, comparisons
+  with the state of the art have been considered, in accordance with different
+  deep learning approaches. The experimental results show an improvement of
+  5.06{\%} in F-measure score for the detection task and an improvement of
+  1.09{\%} in the accuracy measure for the classification task.%
+    }
+    \verb{doi}
+    \verb 10.1109/ACCESS.2019.2908724
+    \endverb
+    \field{issn}{2169-3536}
+    \field{pages}{44709\bibrangedash 44720}
+    \field{title}{{A Deep Learning Approach for Breast Invasive Ductal
+  Carcinoma Detection and Lymphoma Multi-Classification in Histological
+  Images}}
+    \verb{url}
+    \verb https://ieeexplore.ieee.org/stamp/stamp.jsp?tp={\&}arnumber=8678759 h
+    \verb ttps://ieeexplore.ieee.org/document/8678759/
+    \endverb
+    \field{volume}{7}
+    \verb{file}
+    \verb :home/alkhaldieid/.local/share/data/Mendeley Ltd./Mendeley Desktop/Do
+    \verb wnloaded/Unknown - Unknown - IEEE Xplore Full-Text PDF(2).pdf:pdf
+    \endverb
+    \field{journaltitle}{IEEE Access}
+    \field{year}{2019}
+  \endentry
+
+  \entry{AzevedoTosta2017}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ATA}{%
+         family={{Azevedo Tosta}},
+         familyi={A\bibinitperiod},
+         given={Tha{\'{i}}na\bibnamedelima A.},
+         giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=NLA}{%
+         family={Neves},
+         familyi={N\bibinitperiod},
+         given={Leandro\bibnamedelima A.},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=dNMZ}{%
+         prefix={do},
+         prefixi={d\bibinitperiod},
+         family={Nascimento},
+         familyi={N\bibinitperiod},
+         given={Marcelo\bibnamedelima Z.},
+         giveni={M\bibinitperiod\bibinitdelim Z\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier Ltd}%
+    }
+    \keyw{Chronic lymphocytic leukemia,Follicular lymphoma,Histological
+  images,Mantle cell lymphoma,Segmentation,clinical importance of early
+  diagnosis,preprocessig}
+    \strng{namehash}{ATANLANMZd1}
+    \strng{fullhash}{ATANLANMZd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Image processing techniques are being widely developed for helping
+  specialists in analysis of histological images obtained from biopsies for
+  diagnoses and prognoses determination. Several types of cancer can be
+  diagnosed using segmentation methods that are capable to identify specific
+  neoplastic regions. The use of these computational methods makes the analysis
+  of experts more objective and less time-consuming. Thus, the progressive
+  development of histological images segmentation is an important step for
+  modern medicine. This study presents the progress of recent advances in
+  methods for segmentation of chronic lymphocytic leukemia, follicular lymphoma
+  and mantle cell lymphoma images. The paper shows the main techniques of image
+  processing employed in the stages of preprocessing, detection/segmentation
+  and post-processing of published approaches and discusses their advantages
+  and disadvantages. This study presents the most often used segmentation
+  techniques for these images segmentation, such as thresholding, region-based
+  methods and K-means clustering algorithm. The addressed cancers are also
+  described in histological details as well as possible variations in the
+  tissue preparation and its digitization. Besides, it includes a review of
+  validation techniques and discusses the potential future directions of
+  research in the segmentation of these neoplasias.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.imu.2017.05.009
+    \endverb
+    \field{issn}{23529148}
+    \field{number}{February}
+    \field{pages}{35\bibrangedash 43}
+    \field{title}{{Segmentation methods of H{\&}E-stained histological images
+  of lymphoma: A review}}
+    \verb{url}
+    \verb https://doi.org/10.1016/j.imu.2017.05.009
+    \endverb
+    \field{volume}{9}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/future/Segmentation methods o
+    \verb f H{\&}E-stained histological images of lymphoma A review.pdf:pdf
+    \endverb
+    \field{journaltitle}{Informatics in Medicine Unlocked}
+    \field{year}{2017}
+  \endentry
+
+  \entry{HeL.;LongLR;AntaniS.andThoma2009}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HG}{%
+         family={{He, L.; Long, LR; Antani, S. and Thoma}},
+         familyi={H\bibinitperiod},
+         given={GR.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{goal of histological image classification}
+    \strng{namehash}{HG1}
+    \strng{fullhash}{HG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{272\bibrangedash 287}
+    \field{title}{{Computer Assisted Diagnosis in Histopathology.}}
+    \field{volume}{3}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/medical papers/Histology Imag
+    \verb e Analysis for Carcinoma Detection and Grading.pdf:pdf
+    \endverb
+    \field{year}{2009}
+  \endentry
+
+  \entry{Amidi2018}{article}{}
+    \name{author}{6}{}{%
+      {{hash=AA}{%
+         family={Amidi},
+         familyi={A\bibinitperiod},
+         given={Afshine},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AS}{%
+         family={Amidi},
+         familyi={A\bibinitperiod},
+         given={Shervine},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VD}{%
+         family={Vlachakis},
+         familyi={V\bibinitperiod},
+         given={Dimitrios},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Megalooikonomou},
+         familyi={M\bibinitperiod},
+         given={Vasileios},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=PN}{%
+         family={Paragios},
+         familyi={P\bibinitperiod},
+         given={Nikos},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=ZEI}{%
+         family={Zacharaki},
+         familyi={Z\bibinitperiod},
+         given={Evangelia\bibnamedelima I.},
+         giveni={E\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+    }
+    \keyw{3D convolutional neural networks,Deep learning,EnzyNet,Enzyme
+  classification}
+    \strng{namehash}{AA+1}
+    \strng{fullhash}{AAASVDMVPNZEI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    During the past decade, with the significant progress of computational
+  power as well as ever-rising data availability, deep learning techniques
+  became increasingly popular due to their excellent performance on computer
+  vision problems. The size of the Protein Data Bank (PDB) has increased more
+  than 15-fold since 1999, which enabled the expansion of models that aim at
+  predicting enzymatic function via their amino acid composition. Amino acid
+  sequence, however, is less conserved in nature than protein structure and
+  therefore considered a less reliable predictor of protein function. This
+  paper presents EnzyNet, a novel 3D convolutional neural networks classifier
+  that predicts the Enzyme Commission number of enzymes based only on their
+  voxel-based spatial structure. The spatial distribution of biochemical
+  properties was also examined as complementary information. The two-layer
+  architecture was investigated on a large dataset of 63,558 enzymes from the
+  PDB and achieved an accuracy of 78.4{\%} by exploiting only the binary
+  representation of the protein shape. Code and datasets are available at
+  https://github.com/shervinea/enzynet.%
+    }
+    \verb{doi}
+    \verb 10.7717/peerj.4750
+    \endverb
+    \verb{eprint}
+    \verb 1707.06017
+    \endverb
+    \field{issn}{21678359}
+    \field{number}{5}
+    \field{pages}{1\bibrangedash 11}
+    \field{title}{{EnzyNet: Enzyme classification using 3D convolutional neural
+  networks on spatial representation}}
+    \field{volume}{2018}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/1707.06017.pdf:pdf
+    \endverb
+    \field{journaltitle}{PeerJ}
+    \field{eprinttype}{arXiv}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Ozturk2018}{article}{}
+    \name{author}{2}{}{%
+      {{hash=O≈}{%
+         family={{\"{O}}zt{\"{u}}rk},
+         familyi={{\"{O}}\bibinitperiod},
+         given={≈ûaban},
+         giveni={≈\bibinitperiod},
+      }}%
+      {{hash=AB}{%
+         family={Akdemir},
+         familyi={A\bibinitperiod},
+         given={Bayram},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier B.V.}%
+    }
+    \keyw{CNN,classification,convolutional neural networks,histopathological
+  image,preprocessing}
+    \strng{namehash}{O≈AB1}
+    \strng{fullhash}{O≈AB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In this study, classification performance of histopathological images which
+  are processed by pre-processing algorithms using convolutional neural network
+  structure is examined. The images are divided into four different
+  pre-processing classes with their original state and processed with three
+  different techniques. These classes are; original, normal pre-processing,
+  other normal pre-processing and over pre-processing. Histopathological images
+  of these four classes include cancerous and non-cancerous image patches. For
+  these image classes, cancer patch classification is done using the same
+  convolutional neural network structure. In this view, pre-processing effects
+  on the classification success of the convolutional neural network is
+  examined. For the normal pre-processing algorithm, background noise reduction
+  and cell enhancement are applied. For over pre-processing, thresholding and
+  morphological operations are applied in addition to normal preprocessing
+  operations. At the end of the experiments, the most successful classification
+  results are produced with the normal pre-processing algorithms. This is why
+  the meaningful features of the image are left for the CNN structure that
+  automatically learns the feature. The over pre-processing algorithm removes
+  most of these important features from the image.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.procs.2018.05.166
+    \endverb
+    \field{issn}{18770509}
+    \field{number}{June}
+    \field{pages}{396\bibrangedash 403}
+    \field{title}{{Effects of Histopathological Image Pre-processing on
+  Convolutional Neural Networks}}
+    \verb{url}
+    \verb https://doi.org/10.1016/j.procs.2018.05.166
+    \endverb
+    \field{volume}{132}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/Preprossing/Effects of Histop
+    \verb athological Image Pre-processing on Convolutional Neural Networks.pdf
+    \verb :pdf
+    \endverb
+    \field{journaltitle}{Procedia Computer Science}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Aresta2019}{article}{}
+    \name{author}{36}{}{%
+      {{hash=AG}{%
+         family={Aresta},
+         familyi={A\bibinitperiod},
+         given={Guilherme},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=AT}{%
+         family={Ara{\'{u}}jo},
+         familyi={A\bibinitperiod},
+         given={Teresa},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kwok},
+         familyi={K\bibinitperiod},
+         given={Scotty},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CSS}{%
+         family={Chennamsetty},
+         familyi={C\bibinitperiod},
+         given={Sai\bibnamedelima Saketh},
+         giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Safwan},
+         familyi={S\bibinitperiod},
+         given={Mohammed},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AV}{%
+         family={Alex},
+         familyi={A\bibinitperiod},
+         given={Varghese},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MB}{%
+         family={Marami},
+         familyi={M\bibinitperiod},
+         given={Bahram},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Prastawa},
+         familyi={P\bibinitperiod},
+         given={Marcel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Chan},
+         familyi={C\bibinitperiod},
+         given={Monica},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Donovan},
+         familyi={D\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FG}{%
+         family={Fernandez},
+         familyi={F\bibinitperiod},
+         given={Gerardo},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zeineh},
+         familyi={Z\bibinitperiod},
+         given={Jack},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kohl},
+         familyi={K\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Walz},
+         familyi={W\bibinitperiod},
+         given={Christoph},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LF}{%
+         family={Ludwig},
+         familyi={L\bibinitperiod},
+         given={Florian},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Braunewell},
+         familyi={B\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Baust},
+         familyi={B\bibinitperiod},
+         given={Maximilian},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VQD}{%
+         family={Vu},
+         familyi={V\bibinitperiod},
+         given={Quoc\bibnamedelima Dang},
+         giveni={Q\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=TMNN}{%
+         family={To},
+         familyi={T\bibinitperiod},
+         given={Minh Nguyen\bibnamedelima Nhat},
+         giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim
+  N\bibinitperiod},
+      }}%
+      {{hash=KE}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Eal},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=KJT}{%
+         family={Kwak},
+         familyi={K\bibinitperiod},
+         given={Jin\bibnamedelima Tae},
+         giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Galal},
+         familyi={G\bibinitperiod},
+         given={Sameh},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SFV}{%
+         family={Sanchez-Freire},
+         familyi={S\bibinithyphendelim F\bibinitperiod},
+         given={Veronica},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=BN}{%
+         family={Brancati},
+         familyi={B\bibinitperiod},
+         given={Nadia},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Frucci},
+         familyi={F\bibinitperiod},
+         given={Maria},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RD}{%
+         family={Riccio},
+         familyi={R\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WY}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Yaqi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Lingling},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Kaiqiang},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=FJ}{%
+         family={Fang},
+         familyi={F\bibinitperiod},
+         given={Jiannan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KI}{%
+         family={Kone},
+         familyi={K\bibinitperiod},
+         given={Ismael},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Boulmane},
+         familyi={B\bibinitperiod},
+         given={Lahsen},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Campilho},
+         familyi={C\bibinitperiod},
+         given={Aur{\'{e}}lio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=EC}{%
+         family={Eloy},
+         familyi={E\bibinitperiod},
+         given={Catarina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Pol{\'{o}}nia},
+         familyi={P\bibinitperiod},
+         given={Ant{\'{o}}nio},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AP}{%
+         family={Aguiar},
+         familyi={A\bibinitperiod},
+         given={Paulo},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{Breast cancer,Challenge,Comparative study,Deep learning,Digital
+  pathology,Histology}
+    \strng{namehash}{AG+1}
+  \strng{fullhash}{AGATKSCSSSMAVMBPMCMDMFGZJKMWCLFBSBMVQDTMNNKEKJTGSSFVBNFMRDWYSLMKFJKIBLCAECPAAP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Breast cancer is the most common invasive cancer in women, affecting more
+  than 10{\%} of women worldwide. Microscopic analysis of a biopsy remains one
+  of the most important methods to diagnose the type of breast cancer. This
+  requires specialized analysis by pathologists, in a task that i) is highly
+  time- and cost-consuming and ii) often leads to nonconsensual results. The
+  relevance and potential of automatic classification algorithms using
+  hematoxylin-eosin stained histopathological images has already been
+  demonstrated, but the reported results are still sub-optimal for clinical
+  use. With the goal of advancing the state-of-the-art in automatic
+  classification, the Grand Challenge on BreAst Cancer Histology images (BACH)
+  was organized in conjunction with the 15th International Conference on Image
+  Analysis and Recognition (ICIAR 2018). BACH aimed at the classification and
+  localization of clinically relevant histopathological classes in microscopy
+  and whole-slide images from a large annotated dataset, specifically compiled
+  and made publicly available for the challenge. Following a positive response
+  from the scientific community, a total of 64 submissions, out of 677
+  registrations, effectively entered the competition. The submitted algorithms
+  improved the state-of-the-art in automatic classification of breast cancer
+  with microscopy images to an accuracy of 87{\%}. Convolutional neuronal
+  networks were the most successful methodology in the BACH challenge. Detailed
+  analysis of the collective results allowed the identification of remaining
+  challenges in the field and recommendations for future developments. The BACH
+  dataset remains publicly available as to promote further improvements to the
+  field of automatic classification in digital pathology.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.media.2019.05.010
+    \endverb
+    \verb{eprint}
+    \verb arXiv:1808.04277v1
+    \endverb
+    \field{issn}{13618423}
+    \field{pages}{122\bibrangedash 139}
+    \field{title}{{BACH: Grand challenge on breast cancer histology images}}
+    \field{volume}{56}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/dataset/BACH$\backslash$: Gra
+    \verb nd Challenge on Breast Cancer Histology Images:
+    \endverb
+    \field{journaltitle}{Medical Image Analysis}
+    \field{eprinttype}{arXiv}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Zakerzadeh2014}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZH}{%
+         family={Zakerzadeh},
+         familyi={Z\bibinitperiod},
+         given={Hessam},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ACC}{%
+         family={Aggrawal},
+         familyi={A\bibinitperiod},
+         given={Charu\bibnamedelima C.},
+         giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Barker},
+         familyi={B\bibinitperiod},
+         given={Ken},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZHACCBK1}
+    \strng{fullhash}{ZHACCBK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The curse of dimensionality has remained a challenge for a wide variety of
+  algorithms in data mining, clustering, classification and privacy. Recently,
+  it was shown that an increasing dimensionality makes the data resistant to
+  effective privacy. The theoretical results seem to suggest that the
+  dimensionality curse is a fundamental barrier to privacy preservation.
+  However, in practice, we show that some of the common properties of real data
+  can be leveraged in order to greatly ameliorate the negative effects of the
+  curse of dimensionality. In real data sets, many dimensions contain high
+  levels of inter-attribute correlations. Such correlations enable the use of a
+  process known as vertical fragmentation in order to decompose the data into
+  vertical subsets of smaller dimensionality. An information-theoretic
+  criterion of mutual information is used in the vertical decomposition
+  process. This allows the use of an anonymization process, which is based on
+  combining results from multiple independent fragments. We present a general
+  approach which can be applied to the k-anonymity, l-diversity, and
+  t-closeness models. In the presence of inter-attribute correlations, such an
+  approach continues to be much more robust in higher dimensionality, without
+  losing accuracy. We present experimental results illustrating the
+  effectiveness of the approach. This approach is resilient enough to prevent
+  identity, attribute, and membership disclosure attack.%
+    }
+    \verb{eprint}
+    \verb 1401.1174
+    \endverb
+    \field{title}{{Towards Breaking the Curse of Dimensionality for
+  High-Dimensional Privacy: An Extended Version}}
+    \verb{url}
+    \verb http://arxiv.org/abs/1401.1174
+    \endverb
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/1401.1174curse:1174curse
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{year}{2014}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Deng}{article}{}
+    \name{author}{6}{}{%
+      {{hash=DJ}{%
+         family={Deng},
+         familyi={D\bibinitperiod},
+         given={Jia},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DW}{%
+         family={Dong},
+         familyi={D\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Socher},
+         familyi={S\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LLj}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Li-jia},
+         giveni={L\bibinithyphendelim j\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Kai},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=FfL}{%
+         family={Fei-fei},
+         familyi={F\bibinithyphendelim f\bibinitperiod},
+         given={Li},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DJ+1}
+    \strng{fullhash}{DJDWSRLLjLKFfL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{2\bibrangedash 9}
+    \field{title}{{ImageNet : A Large-Scale Hierarchical Image Database}}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/imagenet{\_}cvpr09.pdf:pdf
+    \endverb
+  \endentry
+
+  \entry{Hendrycks2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HD}{%
+         family={Hendrycks},
+         familyi={H\bibinitperiod},
+         given={Dan},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LK}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Kimin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mazeika},
+         familyi={M\bibinitperiod},
+         given={Mantas},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HDLKMM1}
+    \strng{fullhash}{HDLKMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    He et al. (2018) have called into question the utility of pre-training by
+  showing that training from scratch can often yield similar performance to
+  pre-training. We show that although pre-training may not improve performance
+  on traditional classification metrics, it improves model robustness and
+  uncertainty estimates. Through extensive experiments on adversarial examples,
+  label corruption, class imbalance, out-of-distribution detection, and
+  confidence calibration, we demonstrate large gains from pre-training and
+  complementary effects with task-specific methods. We introduce adversarial
+  pre-training and show approximately a 10{\%} absolute improvement over the
+  previous state-of-the-art in adversarial robustness. In some cases, using
+  pre-training without task-specific methods also surpasses the
+  state-of-the-art, highlighting the need for pre-training when evaluating
+  future methods on robustness and uncertainty tasks.%
+    }
+    \verb{eprint}
+    \verb 1901.09960
+    \endverb
+    \field{number}{2018}
+    \field{title}{{Using Pre-Training Can Improve Model Robustness and
+  Uncertainty}}
+    \verb{url}
+    \verb http://arxiv.org/abs/1901.09960
+    \endverb
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/transfer learning papers/Usin
+    \verb g Pre-Training Can Improve Model Robustness and Uncertainty.pdf:pdf
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{year}{2019}
+  \endentry
+
+  \entry{Yosinski2014}{article}{}
+    \name{author}{4}{}{%
+      {{hash=YJ}{%
+         family={Yosinski},
+         familyi={Y\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Clune},
+         familyi={C\bibinitperiod},
+         given={Jeff},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bengio},
+         familyi={B\bibinitperiod},
+         given={Yoshua},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LH}{%
+         family={Lipson},
+         familyi={L\bibinitperiod},
+         given={Hod},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YJ+1}
+    \strng{fullhash}{YJCJBYLH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Many deep neural networks trained on natural images exhibit a curious
+  phenomenon in common: on the first layer they learn features similar to Gabor
+  filters and color blobs. Such first-layer features appear not to be specific
+  to a particular dataset or task, but general in that they are applicable to
+  many datasets and tasks. Features must eventually transition from general to
+  specific by the last layer of the network, but this transition has not been
+  studied extensively. In this paper we experimentally quantify the generality
+  versus specificity of neurons in each layer of a deep convolutional neural
+  network and report a few surprising results. Transferability is negatively
+  affected by two distinct issues: (1) the specialization of higher layer
+  neurons to their original task at the expense of performance on the target
+  task, which was expected, and (2) optimization difficulties related to
+  splitting networks between co-adapted neurons, which was not expected. In an
+  example network trained on ImageNet, we demonstrate that either of these two
+  issues may dominate, depending on whether features are transferred from the
+  bottom, middle, or top of the network. We also document that the
+  transferability of features decreases as the distance between the base task
+  and target task increases, but that transferring features even from distant
+  tasks can be better than using random features. A final surprising result is
+  that initializing a network with transferred features from almost any number
+  of layers can produce a boost to generalization that lingers even after
+  fine-tuning to the target dataset.%
+    }
+    \verb{eprint}
+    \verb arXiv:1411.1792v1
+    \endverb
+    \field{issn}{10495258}
+    \field{number}{January}
+    \field{pages}{3320\bibrangedash 3328}
+    \field{title}{{How transferable are features in deep neural networks?}}
+    \field{volume}{4}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/transfer learning papers/How
+    \verb transferable are features in deep neuralnetworks.pdf:pdf
+    \endverb
+    \field{journaltitle}{Advances in Neural Information Processing Systems}
+    \field{eprinttype}{arXiv}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Dietterich2000}{article}{}
+    \name{author}{1}{}{%
+      {{hash=DTG}{%
+         family={Dietterich},
+         familyi={D\bibinitperiod},
+         given={Thomas\bibnamedelima G.},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \keyw{average}
+    \strng{namehash}{DTG1}
+    \strng{fullhash}{DTG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Ensemble methods are learning algorithms that construct a set of
+  classifiers and then classify new data points by taking a (weighted) vote of
+  their predictions. The original ensemble method is Bayesian averaging, but
+  more recent algorithms include error-correcting output coding, Bagging, and
+  boosting. This paper reviews these methods and explains why ensembles can
+  often perform better than any single classifier. Some previous studies
+  comparing ensemble methods are reviewed, and some new experiments are
+  presented to uncover the reasons that Adaboost does not overfit rapidly.%
+    }
+    \field{isbn}{3540677046}
+    \field{issn}{03029743}
+    \field{pages}{1\bibrangedash 15}
+    \field{title}{{Ensemble methods in machine learning}}
+    \field{volume}{1857 LNCS}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/Ensemble/mcs-ensembles.pdf:pd
+    \verb f
+    \endverb
+    \field{journaltitle}{Lecture Notes in Computer Science (including subseries
+  Lecture Notes in Artificial Intelligence and Lecture Notes in
+  Bioinformatics)}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Nanni2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=NL}{%
+         family={Nanni},
+         familyi={N\bibinitperiod},
+         given={Loris},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Ghidoni},
+         familyi={G\bibinitperiod},
+         given={Stefano},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Brahnam},
+         familyi={B\bibinitperiod},
+         given={Sheryl},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{NLGSBS1}
+    \strng{fullhash}{NLGSBS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    This work presents a system based on an ensemble of Convolutional Neural
+  Networks (CNNs) and descriptors for bioimage classification that has been
+  validated on different datasets of color images. The proposed system
+  represents a very simple yet effective way of boosting the performance of
+  trained CNNs by composing multiple CNNs into an ensemble and combining scores
+  by sum rule. Several types of ensembles are considered, with different CNN
+  topologies along with different learning parameter sets. The proposed system
+  not only exhibits strong discriminative power but also generalizes well over
+  multiple datasets thanks to the combination of multiple descriptors based on
+  different feature types, both learned and handcrafted. Separate classifiers
+  are trained for each descriptor, and the entire set of classifiers is
+  combined by sum rule. Results show that the proposed system obtains
+  state-of-the-art performance across four different bioimage and medical
+  datasets. The MATLAB code of the descriptors will be available at
+  https://github.com/LorisNanni.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.aci.2018.06.002
+    \endverb
+    \field{issn}{22108327}
+    \field{title}{{Ensemble of convolutional neural networks for bioimage
+  classification}}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/Ensemble/Ensemble of convolut
+    \verb ional neural networks for bioimage classification.pdf:pdf
+    \endverb
+    \field{journaltitle}{Applied Computing and Informatics}
+    \field{year}{2018}
+  \endentry
+
+  \entry{Perez2017}{article}{}
+    \name{author}{2}{}{%
+      {{hash=PL}{%
+         family={Perez},
+         familyi={P\bibinitperiod},
+         given={Luis},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PLWJ1}
+    \strng{fullhash}{PLWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In this paper, we explore and compare multiple solutions to the problem of
+  data augmentation in image classification. Previous work has demonstrated the
+  effectiveness of data augmentation through simple techniques, such as
+  cropping, rotating, and flipping input images. We artificially constrain our
+  access to data to a small subset of the ImageNet dataset, and compare each
+  data augmentation technique in turn. One of the more successful data
+  augmentations strategies is the traditional transformations mentioned above.
+  We also experiment with GANs to generate images of different styles. Finally,
+  we propose a method to allow a neural net to learn augmentations that best
+  improve the classifier, which we call neural augmentation. We discuss the
+  successes and shortcomings of this method on various datasets.%
+    }
+    \verb{eprint}
+    \verb 1712.04621
+    \endverb
+    \field{title}{{The Effectiveness of Data Augmentation in Image
+  Classification using Deep Learning}}
+    \verb{url}
+    \verb http://arxiv.org/abs/1712.04621
+    \endverb
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/data aug/The Effectiveness of
+    \verb  Data Augmentation in Image Classification using Deep:
+    \endverb
+    \field{eprinttype}{arXiv}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Lecun1998}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LY}{%
+         family={Lecun},
+         familyi={L\bibinitperiod},
+         given={Yann},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Bottou},
+         familyi={B\bibinitperiod},
+         given={Leon},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BY}{%
+         family={Bengio},
+         familyi={B\bibinitperiod},
+         given={Yoshua},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Ha},
+         familyi={H\bibinitperiod},
+         given={Patrick},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{convo-,document recogni-,fi-,gradient-based learning,graph
+  transformer networks,lutional neural networks,machine learning,neural
+  networks,nite state transducers,ocr,tion}
+    \strng{namehash}{LY+1}
+    \strng{fullhash}{LYBLBYHP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    We present a fast, fully parameterizable GPU implementation of
+  Convolutional Neural Network variants. Our feature extractors are neither
+  carefully designed nor pre-wired, but rather learned in a supervised way. Our
+  deep hierarchical architectures achieve the best published results on
+  benchmarks for object classification (NORB, CIFAR10) and handwritten digit
+  recognition (MNIST), with error rates of 2.53{\%}, 19.51{\%}, 0.35{\%},
+  respectively. Deep nets trained by simple back-propagation perform better
+  than more shallow ones. Learning is surprisingly rapid. NORB is completely
+  trained within five epochs. Test error rates on MNIST drop to 2.42{\%},
+  0.97{\%} and 0.48{\%} after 1, 3 and 17 epochs, respectively.%
+    }
+    \verb{doi}
+    \verb 10.1109/5.726791
+    \endverb
+    \verb{eprint}
+    \verb 1102.0183
+    \endverb
+    \field{isbn}{0018-9219}
+    \field{issn}{00189219}
+    \field{number}{November}
+    \field{pages}{1\bibrangedash 46}
+    \field{title}{{LeNet}}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/Lecun98.pdf:pdf
+    \endverb
+    \field{journaltitle}{Proceedings of the IEEE}
+    \field{eprinttype}{arXiv}
+    \field{year}{1998}
+  \endentry
+
+  \entry{Srivastava2014}{article}{}
+    \name{author}{5}{}{%
+      {{hash=SN}{%
+         family={Srivastava},
+         familyi={S\bibinitperiod},
+         given={Nitish},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=HG}{%
+         family={Hinton},
+         familyi={H\bibinitperiod},
+         given={Geoffrey},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Krizhevsky},
+         familyi={K\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SI}{%
+         family={Sutskever},
+         familyi={S\bibinitperiod},
+         given={Ilya},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=SR}{%
+         family={Salakhutdinov},
+         familyi={S\bibinitperiod},
+         given={Ruslan},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{Deep learning,Model combination,Neural networks,Regularization}
+    \strng{namehash}{SN+1}
+    \strng{fullhash}{SNHGKASISR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Deep neural nets with a large number of parameters are very powerful
+  machine learning systems. However, overfitting is a serious problem in such
+  networks. Large networks are also slow to use, making it difficult to deal
+  with overfitting by combining the predictions of many different large neural
+  nets at test time. Dropout is a technique for addressing this problem. The
+  key idea is to randomly drop units (along with their connections) from the
+  neural network during training. This prevents units from co-adapting too
+  much. During training, dropout samples from an exponential number of
+  different ‚Äúthinned‚Äù networks. At test time, it is easy to approximate the
+  effect of averaging the predictions of all these thinned networks by simply
+  using a single unthinned network that has smaller weights. This significantly
+  reduces overfitting and gives major improvements over other regularization
+  methods. We show that dropout improves the performance of neural networks on
+  supervised learning tasks in vision, speech recognition, document
+  classification and computational biology, obtaining state-of-the-art results
+  on many benchmark data sets%
+    }
+    \field{issn}{15337928}
+    \field{pages}{1929\bibrangedash 1958}
+    \field{title}{{Dropout: A simple way to prevent neural networks from
+  overfitting}}
+    \field{volume}{15}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/regulizations/Dropout.pdf:pdf
+    \endverb
+    \field{journaltitle}{Journal of Machine Learning Research}
+    \field{year}{2014}
+  \endentry
+
+  \entry{Smith2017a}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SLN}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Leslie\bibnamedelima N.},
+         giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SLN1}
+    \strng{fullhash}{SLN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    It is known that the learning rate is the most important hyper-parameter to
+  tune for training deep neural networks. This paper describes a new method for
+  setting the learning rate, named cyclical learning rates, which practically
+  eliminates the need to experimentally find the best values and schedule for
+  the global learning rates. Instead of monotonically decreasing the learning
+  rate, this method lets the learning rate cyclically vary between reasonable
+  boundary values. Training with cyclical learning rates instead of fixed
+  values achieves improved classification accuracy without a need to tune and
+  often in fewer iterations. This paper also describes a simple way to estimate
+  'reasonable bounds' - linearly increasing the learning rate of the network
+  for a few epochs. In addition, cyclical learning rates are demonstrated on
+  the CIFAR-10 and CIFAR-100 datasets with ResNets, Stochastic Depth networks,
+  and DenseNets, and the ImageNet dataset with the AlexNet and GoogLeNet
+  architectures. These are practical tools for everyone who trains neural
+  networks.%
+    }
+    \verb{doi}
+    \verb 10.1109/WACV.2017.58
+    \endverb
+    \verb{eprint}
+    \verb 1506.01186
+    \endverb
+    \field{isbn}{9781509048229}
+    \field{number}{April}
+    \field{pages}{464\bibrangedash 472}
+    \field{title}{{Cyclical learning rates for training neural networks}}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/Learning Rate Schedueling/Cyc
+    \verb lical Learning Rates for Training Neural Networks.pdf:pdf
+    \endverb
+    \field{journaltitle}{Proceedings - 2017 IEEE Winter Conference on
+  Applications of Computer Vision, WACV 2017}
+    \field{eprinttype}{arXiv}
+    \field{year}{2017}
+  \endentry
+
+  \entry{Ioffe2015a}{article}{}
+    \name{author}{2}{}{%
+      {{hash=IS}{%
+         family={Ioffe},
+         familyi={I\bibinitperiod},
+         given={Sergey},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Szegedy},
+         familyi={S\bibinitperiod},
+         given={Christian},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ISSC1}
+    \strng{fullhash}{ISSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Training Deep Neural Networks is complicated by the fact that the
+  distribution of each layer's inputs changes during training, as the
+  parameters of the previous layers change. This slows down the training by
+  requiring lower learning rates and careful parameter initialization, and
+  makes it notoriously hard to train models with saturating nonlinearities. We
+  refer to this phenomenon as internal covariate shift, and address the problem
+  by normalizing layer inputs. Our method draws its strength from making
+  normalization a part of the model architecture and performing the
+  normalization for each training mini-batch. Batch Normalization allows us to
+  use much higher learning rates and be less careful about initialization. It
+  also acts as a regularizer, in some cases eliminating the need for Dropout.
+  Applied to a state-of-the-art image classification model, Batch Normalization
+  achieves the same accuracy with 14 times fewer training steps, and beats the
+  original model by a significant margin. Using an ensemble of batch-normalized
+  networks, we improve upon the best published result on ImageNet
+  classification: reaching 4.9{\%} top-5 validation error (and 4.8{\%} test
+  error), exceeding the accuracy of human raters.%
+    }
+    \verb{eprint}
+    \verb arXiv:1502.03167v3
+    \endverb
+    \field{isbn}{9781510810587}
+    \field{pages}{448\bibrangedash 456}
+    \field{title}{{Batch normalization: Accelerating deep network training by
+  reducing internal covariate shift}}
+    \field{volume}{1}
+    \verb{file}
+    \verb :home/alkhaldieid/.local/share/data/Mendeley Ltd./Mendeley Desktop/Do
+    \verb wnloaded/Ioffe, Szegedy - 2015 - Batch normalization Accelerating dee
+    \verb p network training by reducing internal covariate shift.pdf:pdf
+    \endverb
+    \field{journaltitle}{32nd International Conference on Machine Learning,
+  ICML 2015}
+    \field{eprinttype}{arXiv}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Singh2018}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SRK}{%
+         family={Singh},
+         familyi={S\bibinitperiod},
+         given={Rajiv\bibnamedelima K.},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{Emergence of abstract semantics,Equivalence of physical interaction
+  and informatio,Physics of representation,Reality of information in
+  nature,Semantic value of information}
+    \strng{namehash}{SRK1}
+    \strng{fullhash}{SRK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Our understanding of the natural universe is far from being comprehensive.
+  The following questions bring to the fore some of the fundamental issues. Is
+  there a reality of information associated with the states of matter based
+  entirely on natural causation? If so, then what constitutes the mechanism of
+  information exchange (processing) at each interaction of physical entities?
+  Let the association of information with a state of matter be referred to as
+  the representation of semantic value expressed by the information. We ask,
+  can the semantic value be quantified, described, and operated upon with
+  symbols, as mathematical symbols describe the material world? In this work,
+  these questions are dealt with substantively to establish the fundamental
+  principles of the mechanisms of representation and propagation of information
+  with every physical interaction. A quantitative method of information
+  processing is derived from the first principles to show how high level
+  structured and abstract semantics may arise via physical interactions alone,
+  without a need for an intelligent interpreter. It is further shown that the
+  natural representation constitutes a basis for the description, and
+  therefore, for comprehension, of all natural phenomena, creating a more
+  holistic view of nature. A brief discussion underscores the natural
+  information processing as the foundation for the genesis of language and
+  mathematics. In addition to the derivation of theoretical basis from
+  established observations, the method of information processing is further
+  demonstrated by a computer simulation.%
+    }
+    \field{booktitle}{Information (Switzerland)}
+    \verb{doi}
+    \verb 10.3390/info9070168
+    \endverb
+    \field{isbn}{9781420011449}
+    \field{issn}{20782489}
+    \field{number}{7}
+    \field{title}{{Fundamentals of natural representation}}
+    \field{volume}{9}
+    \verb{file}
+    \verb :home/alkhaldieid/.local/share/data/Mendeley Ltd./Mendeley Desktop/Do
+    \verb wnloaded/Singh - 2018 - Fundamentals of natural representation.pdf:pd
+    \verb f
+    \endverb
+    \field{year}{2018}
+  \endentry
+
+  \entry{Williams2006}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WN}{%
+         family={Williams},
+         familyi={W\bibinitperiod},
+         given={Nigel},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zander},
+         familyi={Z\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AG}{%
+         family={Armitage},
+         familyi={A\bibinitperiod},
+         given={Grenville},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{Machine learning,Traffic classification}
+    \strng{namehash}{WNZSAG1}
+    \strng{fullhash}{WNZSAG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The identification of network applications through observation of
+  associated packet traffic flows is vital to the areas of network management
+  and surveillance. Currently popular methods such as port number and
+  payload-based identification exhibit a number of shortfalls. An alternative
+  is to use machine learning (ML) techniques and identify network applications
+  based on per-flow statistics, derived from payload-independent features such
+  as packet length and inter-arrival time distributions. The performance impact
+  of feature set reduction, using Consistency-based and Correlation-based
+  feature selection, is demonstrated on Na{\"{i}}ve Bayes, C4.5, Bayesian
+  Network and Na{\"{i}}ve Bayes Tree algorithms. We then show that it is useful
+  to differentiate algorithms based on computational performance rather than
+  classification accuracy alone, as although classification accuracy between
+  the algorithms is similar, computational performance can differ
+  significantly.%
+    }
+    \verb{doi}
+    \verb 10.1145/1163593.1163596
+    \endverb
+    \field{issn}{01464833}
+    \field{number}{5}
+    \field{pages}{7\bibrangedash 15}
+    \field{title}{{A preliminary performance comparison of five machine
+  learning algorithms for practical IP traffic flow classification}}
+    \field{volume}{36}
+    \verb{file}
+    \verb :home/alkhaldieid/Desktop/papers/papers/A{\_}preliminary{\_}performan
+    \verb ce{\_}comparison{\_}of{\_}five{\_}machi.pdf:pdf
+    \endverb
+    \field{journaltitle}{Computer Communication Review}
+    \field{year}{2006}
+  \endentry
+\enddatalist
+\endinput

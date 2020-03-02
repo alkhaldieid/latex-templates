@@ -1,0 +1,452 @@
+\documentclass[a4paper, 12 pt, conference]{ieeeconf}
+
+                                                          % if you need a4paper
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+\usepackage[backend=bibtex,style=numeric,citestyle=numeric-comp, sorting=none]{biblatex}
+\addbibresource{lib3.bib}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption,tabularx,booktabs}
+\usepackage{float}
+\raggedbottom
+\UseRawInputEncoding
+\usepackage{authblk}
+% Keywords command
+\providecommand{\keywords}[1]
+{
+  \small
+  \textbf{\textit{Keywords---}} #1
+}
+%opening
+\title{\Large \bf Genetically Optimized Heterogeneous Ensemble for Histological Image Classification}
+
+%\author{Author One\qquad Author Two\\Affiliation}
+
+
+\author{\textbf{Eid Alkhaldi$^{1}$\qquad \bf Ezatollah Salari$^{2}$}\\
+		  \small Eid.Alkhaldi@gmail.com\quad Ezzatollah.Salari@utoledo.edu\\
+
+		\large \bf The University of Toledo\\
+		 { Dept. Electrical Engineering and Computer Science}\\
+
+		 \small \textit{OH, Toledo, USA}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Learning an accurate mapping between the complex feature representations of histology images and their labels can magnify the reliability of automated diagnostic systems. Hence, breast histology Image classification is a significant problem in medical image processing.  CNNs showed superiority in extracting beneficial features and became the most widely used image classification approach. However, the current state-of-the-art CNN techniques, such as Transfer Learning, fail to generalize for small datasets with complex texture and high resolution due to insufficient domain-adaptation. Furthermore, most ensembles of transfer learning models need manual parameter selection of the ensemble policy based solely on the accuracy of each classifier, without a guarantee of heterogeneity. To solve these problems, we propose a fully automated multi-stage training of horizontally stacked ensemble of CNNs, which consists of two stages. First, we optimize the task-specific layers and the ensemble hyper-parameters on low-resolution images using the Genetic Algorithm during the meta-training stage. Secondly, we thoroughly train the ensemble using the optimal parameters on high-resolution images. Our model achieved 1\% more accuracy than the ICIAR 2018 Challenge winning approach. The results of the proposed method have been compared to previously published methods and exceeded many of the state-of-art techniques by a substantial margin.
+\end{abstract}
+\begin{keywords}
+\small \textit{The University of Toledo}
+\end{keywords}
+
+\section{Introduction}
+\quad Histological image classification is one of the most crucial problems of medical image processing, which demands extensive work and specialized expertise \cite{He2016,Ahmad2019,Pimkin2018}. Hence,  An automated intelligent approach is needed to compensate for the time delay of analysis caused by the insufficient number of pathologists \cite{Cao2018}. Early diagnosis of breast malignancy through histology patches is of prominent clinical significance for detection, prognosis, therapy, and reducing healthcare costs \cite{Brancati2019, AzevedoTosta2017}. Breast histology image classification aims to identify abnormalities in the specimens' structures and specify their carcinogenic level \cite{HeL.;LongLR;AntaniS.andThoma2009}. Deep Learning (DL) showed remarkable competence in tackling image classification over the past years due to the accelerated developments in computational resources \cite{Brancati2019,AzevedoTosta2017,Amidi2018, Pimkin2018}.
+
+
+\quad Deep Learning techniques extract very complex features for images, which expands class separability considerably better than the conventional machine learning methods \cite{Ozturk2018}.  Various DL approaches have been applied to categorize histology images. CNNs are the most reliable DL models employed for Histology image labeling \cite{Aresta2019}. However, for CNNs to be accurate, they demand a high quantity of labeled images. The more parameters a CNN holds, the larger the dataset needs to be, and the more training time is required, which is a limitation acknowledged in the DL research as the curse of dimensionality \cite{Zakerzadeh2014}. Consequently, end-to-end training of CNNs suffered significantly, due to the scarcity of annotated hematoxylin and eosin (H\&E) stained histology images.
+
+\quad The trade-off between the scale of the model and the computational demands is often one of the issues hindering the performance of the state-of-art techniques. The extent of the model depends on the depth of the network and the resolution of the input images. The size of the input images is particularly crucial to histological image classification as a result of the enigmatic characteristics of these high-resolution images. However, in many cases, computational capacity limitations constrain researchers to resize the patches to a shallower resolution, which negatively influences the accuracy of the model \cite{Pimkin2018}.
+
+\quad Several preprocessing methods were applied to improve the performance of CNNs such as image enhancement, thresholding, normalization, and spatial transformation \cite{AzevedoTosta2017, Ozturk2018}. Although preprocessing methods achieved a slight improvement, they failed to address the curse of dimensionality bottleneck.
+
+
+\quad Transfer Learning is the process of re-utilization of models' weights that were trained on benchmark datasets such as ImageNet \cite{Deng, Hendrycks2019}. Transfer Learning proved to be a more reliable alternative to end-to-end training because it improves accuracy and robustness and reduces the training time significantly, particularly for small datasets \cite{Hendrycks2019}. Utilizing pre-trained models to extract features and fine-tuning the last densely connected layer remained the most two Transfer Learning approaches applied for image classification. Although using pre-trained weights as initial weights performed better than end-to-end training, they overlooked domain transferability and determining the task-specific layers of the pre-trained model in histology images datasets \cite{Yosinski2014}.
+
+\quad Another attempt to improve the accuracy of models for small histology image dataset was by employing ensembles. Ensembles are sets of CNNs whose predictions are joined in a particular fashion to produce a final prediction \cite{Dietterich2000}. Bayesian, majority voting, average voting are the most popular DL ensemble methods\cite{Dietterich2000, Nanni2018}. Although ensembles achieve higher accuracy than individual networks, they are computationally expensive due to the immense search space of hyper-parameters. Besides, the extracted features of each classifier need to be distinct for an ensemble to generalize well on new unseen data \cite{Dietterich2000, Nanni2018}. Modern ensemble methods focus solely on the validation accuracy of the ensemble networks without approaching the heterogeneity of their features and variance of their errors, which frequently leads to over-fitting.
+
+\quad In this paper, we propose a method that leverages the Genetic Algorithm to ascertain the task-specific layers of pre-trained networks on low-resolution images for optimal domain adaptation. We use the confusion matrix of the models over the validation data to define the heterogeneity of CNNs. Subsequently, we thoroughly train the most accurate models and with the most diverse errors on high-resolution images by applying the learned parameters. Finally, we learn the ensemble rule that combines the horizontally stacked prediction vector.
+
+\quad The remaining sections of the manuscript are organized in the following way. Section II introduces the proposed method with a thorough explanation of the Genetic Algorithm and hyper-parameter optimization. Section III discusses in detail the dataset, training, experimental setup, results,  and evaluation metrics employed. Section IV presents a conclusion and suggestions for prospective research.
+
+\section{Proposed Method}
+\subsection{Overview}
+
+
+	\quad 		The proposed method consists of meta-training and full training stages. The meta-training phase, as shown in Figure 1, begins with statistical image preprocessing, augmentation, and low-resolution cropping.   Several image spatial transformations, such as flipping, rotation, and shifting, lead to effective dataset enlargement, which contributes to lowering overfitting \cite{Perez2017}. The augmented images are resized to a lower resolution to expedite the meta-training. The resultant crops are standardized by utilizing the ImageNet statistic to reduce the distribution disparity between the image sources of the two domains. Image whitening demonstrated efficacy in hastening convergence \cite{Lecun1998}. All of the preprocessing procedures described above occur in real-time right before the mini-batches are fed to the networks to be trained.
+
+\quad Gaussian Dropout is another technique that we implemented in our solution. Adding the gaussian noise to the hidden layer connecting the global averaging and the output layers is an added variation of stochastic regularization. The dropout layer restricts the classifier from learning the irrelevant particularities of an image \cite{Srivastava2014}.  Dropout involves blocking several units from firing during the feedforward and the backpropagation steps of training. The portion of the dropout units is governed by the gaussian distribution, whose standard deviation is expressed in equation (1).
+\begin{equation} \label{gaus}
+\sigma _(gaussian)= \sqrt{rate/(1 - rate)}
+\end{equation}
+	Where \textbf{\textit{rate}} denotes the user control parameter and \(\sigma _(gaussian)\) refers the dropout gaussian standard deviation. Setting the constant rate to 0.2 throughout the trials yielded an excellent performance.
+
+\quad	Incrementally raising the learning rate at every batch accelerates the fine-tuning process by estimating the best base learning rate, as explained in subsection \ref{lrs} \cite{Smith2017a}. During fine-tuning, all layers are frozen except the batch normalization and the last fully connected layer. Training the batch normalization weights reduces the needed training epochs substantially due to its capacity to lower the internal covariant shift during mini-batch training\cite{Ioffe2015a}. The validation loss of the fine-tuned model is the baseline used to compare the achievement of the Genetic Algorithm (GA) best solutions.
+
+\quad	In this study, we propose GA to obtain the fittest estimation of the domain-specific layer, as illustrated thoroughly in subsection \ref{ga}. The Cyclical learning rate and GA cooperatively evade the inconvenience of extravagantly experimenting with numerous freeze-layers and base learning rates. The intuition behind the proposed strategy relies on the fact that the domain-adaptation maximization is separable. The foreknowledge, as mentioned above, remarkably narrows the possible combinations of hyperparameters.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.97\columnwidth, scale =1]{../diagrams/first/FC.png}
+\caption{ Flowchart of the meta-training phase}
+\label{meta}
+\end{figure}
+
+\subsection{Learning Rate Schedulers} \label{lrs}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.97\columnwidth]{../diagrams/first/cyc.png}
+\caption{ High spikes of validiation loss and accuracy curves over exponential cyclical learning rate in a single epoch in ResNet50 with freeze layer = 141 and a batch size = 32. The learning rate with the lowest validation loss at lr = 0.05 is chosen as the base lr for the full training.}
+\label{loss_spikes}
+\end{figure}
+
+\quad Learning rate scheduling methods aim to minimize the cost function. It is unlikely to get trapped at local minima at high dimensional cost functions. Nevertheless, saddle points are more likely to occur.  Similar to local minima, saddle points slow down the training significantly, particularly if the LR is small\cite{Smith2017a}.
+\quad Increasing the LR in this scenario could help the optimizer to escape the saddle point. However, over-increasing the LR will cause fluctuations with high spikes.
+Hence, a cyclical LR scheduler facilitates picking the optimal LR by defining the scaling function, the upper, and the lower bounds \cite{Smith2017a}.
+
+\begin{equation} \label{eq1}
+\begin{split}
+updated LR = base LR + (max LR - base LR) \\
+\times  \frac{\argmax(0, (1 - LR)) \times 1}{2^{LR-1}} \end{split}
+\end{equation}
+
+%\begin{equation}
+%\begin{split}
+%
+%updated LR = base LR + (max LR - base LR) \\ \times  \frac{\argmax(0, (1 - LR)) \times 1}{2^{LR-1}}
+%\end{split}
+%
+%\end{equation}
+
+\subsection{Genetic Algorithm and Ensemble Optimization} \label{ga}
+ \quad The objective of implementing the genetic algorithm is to evolve the solutions to the task-specific layer problem by simulating the natural selection though mating and mutation \cite{Singh2018}.
+
+\quad Each possible solution to the domain-specific layer is represented by a chromosome. Any layer in the search space of the network is encoded into fixed-length nine binary numbers representing 512 possible solutions.
+After calculating the initial fitnesses, the fittest layers are chosen to exchange genes at a predefined crossover probability $P_c$ to produce better offsprings in the next generation.
+
+\quad We freeze all layers up to the decoded chromosome. Then, a cyclical learning scheduler learns the best base learning rate, as explained in the previous subsection. The model is then trained for more epochs, and the validation loss is used as the fitness function parameter to be minimized.
+
+After the completion of the meta-training, models that achieved the most reliable in terms of validation accuracy and loss are analyzed based on heterogeneity, as displayed in Figure \ref{fig:hetrp}. The confusion matrix facilitates a valuable representation of the kind of misclassifications that the model makes. The models that produce similar misclassifications are discarded.
+
+\quad The predictions of the top-performing heterogeneous networks are then concatenated horizontally to form a pre-classification layer. We further train the weights of this layer while freezing the whole model to make the ensemble training efficient and more accurate than simple ensembling policies such as the majority and average voting. Adding the horizontal layer notably improved the generalizability of the model, as demonstrated in Table \ref{tab:prpcr1} and Table \ref{tab:prpcr2}.
+\begin{figure}[htbp]
+    \centering
+    \subfloat[Xception network with GA block converges with a small number of epochs]{%
+        \includegraphics[width=0.4\textwidth]{../diagrams/first/xcepGA.png}%
+        \label{fig:a}%
+        }%
+    \hfill%
+    \subfloat[Xception network bottom-top training overfits due to the lack of proper domain adaptation]{%
+        \includegraphics[width=0.4\textwidth]{../diagrams/first/xcepNoGA.png}%
+        \label{fig:b}%
+        }%
+    \caption{The Effect of The GA Block on Convergence}
+\end{figure}
+
+
+
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[DenseNet201 confusion matrix]{%
+        \includegraphics[width=0.4\textwidth]{../diagrams/first/incepConf.png}%
+        \label{fig:c}%
+        }%
+    \hfill%
+    \subfloat[ResNet50 confusion matrix]{%
+        \includegraphics[width=0.4\textwidth]{../diagrams/first/dense3Conf.png}%
+        \label{fig:d}%
+        }%
+    \hfill%
+    \subfloat[InceptionResNetV2 confusion matrix]{%
+        \includegraphics[width=0.4\textwidth]{../diagrams/first/Dense2Conf.png}%
+        \label{fig:e}%
+        }%
+    \hfill%
+    \subfloat[Xception confusion matrix]{%
+        \includegraphics[width=0.4\textwidth]{../diagrams/first/denseConf.png}%
+        \label{fig:ee}%
+        }%
+
+    \caption{\small Error Type Visualization to Aim Choose \\ Hetrougenous Models by Using the Confusion Matrix}
+\label{fig:hetro}
+\end{figure}
+%
+%\begin{figure}[tbp]
+%\centering
+%\includegraphics[width=0.97\columnwidth]{avgConf.png}
+%\caption{ High spikes of validiation loss and accuracy curves over exponential cyclical learning rate in a single epoch in ResNet50 with freeze layer = 141 and a batch size = 32. The learning rate with the lowest validation loss at lr = 0.05 is chosen as the base lr for the full training.}
+%\label{loss_spikes}
+%\end{figure}
+
+\section{Experimental Setup}
+\subsection{Dataset}
+\quad The histology patches dataset consist of 400 labeled training data and 100 unlabeled test images, each with a 2048 x 1536 pixels. The distribution of cancerous classes of the images is uniform, as shown in Table \ref{tab:dataset}. Highly experienced medical specialists classified the images into four categories. The Classes are Normal, Benign, InSitu, and Invasive. The resolution of the images is 0.42 $\mu$m x $\mu$m per pixel.
+
+%\vspace{\baselineskip}
+\begin{minipage}[htbp]{\linewidth}
+%\centering
+\captionof{table}{\small The Distribution of the ICIAR Dataset in \\our Study.} \label{tab:dataset}
+\begin{tabular}{|c|c|c|c|c|} \toprule[0.5pt]
+\hline
+\small Type & \small Normal & \small Benign & \small InSitu & \small Invasive \\
+\hline
+\small Train & 90 & 90 & 90 & 90 \\
+\hline
+\small validation & 5 & 5 & 5 & 5 \\
+\hline
+\small Held-out test & 5 & 5 & 5 & 5 \\
+\hline
+\small Test & 25 & 25 & 25 & 25 \\
+\hline
+\bottomrule[.50pt]
+\end{tabular}
+\end{minipage}
+%\vspace{\baselineskip}
+
+\subsection{Evaluation Metrics}
+\quad We employed the standard evaluation metrics to compare the performance of the proposed method to other existing techniques. The used evaluation metrics are as follows:
+\begin{itemize}
+  \item Accuracy:  the rate of correct predictions to the total number of samples \cite{Williams2006}.
+\begin{equation}
+  acc = \sum TP + \sum TN/\sum \#samples
+\end{equation}
+  \item Precision: the rate of correct class predictions to the total number of samples belonging to that class \cite{Williams2006}.
+\begin{equation}
+ Precision = \sum TP + \sum TN
+\end{equation}
+
+ \item Recall: the true positive rate \cite{Williams2006}
+\begin{equation}
+ TPR = \sum TP /  \#positive \  samples
+\end{equation}
+
+ \item
+ \begin{equation}
+ F1 score = 2 \times \frac{Precision \times Recall}{(Precision + Recall)}
+ \end{equation}
+ \item log-loss: the cross-entropy loss, which is the negative log-likelihood of the class labels given predictions \cite{Williams2006}.
+ \item The area under the ROC curve
+\end{itemize}
+
+
+
+
+\subsection{Results and Discussion}
+\quad Domain adaptation is decisive for transfer learning. The Genetic Algorithm demonstrated supremacy in determining the transferable layers, as shown in Figure \ref{fig:a}.  As an example, the GA solution of the freeze layers of the Xception enabled the model to transfer swiftly and converge with few epochs. In contrast, the bottom-top strategy of fine-tuning failed to converge even with substantially more iterations. As the number of epochs increased, the training accuracy increased, but the validation loss increased as well. This phenomenon is referred to as overfitting since the model is not learning the characteristics that increase the class separability margin. Alternatively, the model is learning the dataset noise, which is profoundly undesirable. Hence, implementing GA for specifying the transferable features of the network was vital for convergence.
+
+\quad Besides, the effectiveness of the base learning rate is highly correlated to the level of transferability of layers. The more transferable the layer is, the higher the base learning rate needs to be and vice versa. The occasional divergence of the bottom-top training is a result of setting a high base learning rate for layers with low transferability.
+Figure \ref{log_spikes} shows how quickly cyclical learning rate picks the most appropriate base LR with minimal time cost.
+
+\quad Our proposed approach shows notable improvements over earlier published schemes for ensemble learning. The optimized horizontally stacked predictions' vector exhibit increased classification accuracy and additional DL evaluation measures, as confirmed in Table \ref{tab:prpcr2}.
+
+\vspace{\baselineskip}
+\begin{minipage}[htbp]{\linewidth}
+\centering
+\captionof{table}{\small Majority Voting Classification Report} \label{tab:maxcr}
+\begin{tabular}{|c|c|c|c|} \toprule[0.8pt]
+\hline
+{Class. Report} & precision & recall & f1-score \\
+\hline
+Benign & 1.00  & 0.37 & 0.54 \\
+\hline
+InSitu & 0.60 & 1.00 & 0.75 \\
+\hline
+Invasive & 1.00 & 0.93 & 0.97 \\
+\hline
+Normal & 0.97 & 1.00 & 0.98 \\
+\hline
+micro avg & 0.82 & 0.82 & 0.82 \\
+\hline
+macro avg & 0.89 & 0.82 & 0.81 \\
+\hline
+weighted avg & 0.89 & 0.82 & 0.81 \\
+\hline
+ samples avg  & 0.82 & 0.82 & 0.82 \\
+\hline
+\bottomrule[0.8pt]
+\end{tabular}
+\end{minipage}
+\vspace{\baselineskip}
+
+
+\begin{minipage}[htbp]{\linewidth}
+\centering
+\captionof{table}{\small Average Voting Classification Report} \label{tab:avgcr}
+\begin{tabular}{|c|c|c|c|} \toprule[0.8pt]
+\hline
+{Class. Report} & precision  &  recall & f1-score \\
+\hline
+Benign    &   1.00   &   0.70   &   0.82   \\
+\hline
+InSitu   &    0.97   &   1.00   &   0.98   \\
+\hline
+Invasive   &    1.00   &   1.00   &   1.00  \\
+\hline
+Normal   &    0.79    &  1.00   &   0.88   \\
+\hline
+micro avg    &   0.93   &   0.93  &    0.93  \\
+\hline
+macro avg    &   0.94   &   0.93   &   0.92  \\
+\hline
+weighted avg    &   0.94   &   0.93  &    0.92   \\
+\hline
+samples avg    &   0.93   &   0.93   &   0.93  \\
+\hline
+\bottomrule[0.8pt]
+\end{tabular}
+\end{minipage}
+
+\vspace{\baselineskip}
+
+
+\begin{minipage}[htbp]{\linewidth}
+\centering
+\captionof{table}{\small Proposed Voting Classification Report} \label{tab:prpcr1}
+\begin{tabular}{|c|c|c|c|} \toprule[0.8pt]
+\hline
+{Class. Report} & precision & recall & f1-score \\
+\hline
+Benign    &   1.00   &   0.73    &  0.85 \\
+\hline
+In Situ    &   0.97   &   1.00    &  0.98 \\
+\hline
+Invasive    &   1.00   &   1.00    &  1.00 \\
+\hline
+Normal    &   0.81   &   1.00    &  0.90 \\
+\hline
+
+micro avg    &   0.93   &   0.93    &  0.93 \\
+\hline
+macro avg    &   0.94   &   0.93    &  0.93 \\
+\hline
+weighted avg    &   0.94   &   0.93    &  0.93 \\
+\hline
+samples avg    &   0.93   &   0.93    &  0.93 \\
+\hline
+\bottomrule[0.8pt]
+\end{tabular}
+\end{minipage}
+
+\vspace{\baselineskip}
+
+
+\begin{minipage}[htbp]{\columnwidth}
+\centering
+\captionof{table}{\small Evaluation of The Proposed Method Compared to Mavority and Average voting} \label{tab:prpcr2}
+\begin{tabular}{|c|c|c|c|} \toprule[0.5pt]
+\hline
+Eval. /method & Proposed & Maj. & Avg. \\
+\hline
+P. auc roc &  0.9994 &  1.0 & 0.9934 \\
+\hline
+L. auc roc&  0.95556 & 0.8833 & 0.95  \\
+\hline
+L. accuracy & 0.933 & 0.825 & 0.925 \\
+\hline
+P. precision & 0.9985 & 1.0 & 0.988 \\
+\hline
+L. precision & 0.8946 & 0.760 & 0.883 \\
+\hline
+L. log loss& 2.302 & 6.0442 & 2.590 \\
+\hline
+L. coverage error & 1.2 & 1.525 & 1.225 \\
+\hline
+P. coverage error & 1.116 & 1.25   & 1.133 \\
+\hline
+L. LRAP & 0.95 & 0.868 & 0.943 \\
+\hline
+P. LRAP & 0.9583 & 0.899 & 0.9527 \\
+\hline
+ranking loss & 0.066 & 0.175 & 0.075 \\
+\hline
+ICIAR acc. & \textbf{88\%} & 85\% & 87\% \\
+\hline
+
+\bottomrule[0.5pt]
+\end{tabular}
+\end{minipage}
+
+
+%label ranking average precision
+%%label ranking average precision score for predictions
+
+
+\section{Conclusion}
+	\quad The current state-of-the-art transfer learning methods for microscopy image classification lack the systematic separation between task-dependent layers and transferrable ones, resulting in overfitting when training over a limited amount of samples. Moreover, their ensembles have a massive number of hyper-parameters, making it challenging and time-consuming to choose the optimal ones manually.
+
+	\quad This paper presents the utilization of evolutionary algorithms and the cyclical learning rate scheduler to automate the selection of task-specific layers and its appropriate base learning rate during meta-training. The meta-training shrinks the hyper-parameters search space considerably, yielding an accelerated convergence during the comprehensive training stage. Also, it exhibits an intuitive measure of heterogeneity and automatic optimization of the horizontally stacked prediction vector's wights. The experimental outcomes confirm the competence of the proposed method in terms of robustness and training time efficiency.
+
+	  \quad We strongly recommend further investigation toward learning rate schedulers and other search methods of hyper-parameters. Hence, future research should place a particular emphasis on quantum search methods, such as Grover's algorithm, which provides a precise calculation of the iterations' upper bound that assures an optimal solution.
+\printbibliography
+
+\end{document}
+
+
+
+
+%     \small Toledo, USA
+%    \author{\IEEEauthorblockN{1\textsuperscript{st} Eid Alkhaldi}
+%\IEEEauthorblockAstyle{\textit{\small Dept. Electrical Engineering and Computer Science} \\
+%\textit{The University of Toledo}\\
+%\small Toledo, USA \\
+%\small Eid.Alkhaldi@gmail.com}
+%    \and
+%    \IEEEauthorblockN{2\textsuperscript{nd} Ezzatollah Salari}
+%    \IEEEauthorblockA{\textit{\small Dept. Electrical Engineering and Computer Science} \\
+%    \textit{The University of Toledo}\\
+%    \small Toledo, USA \\
+%    \small Ezzatollah.Salari@utoledo.edu }
+%
+%    }
+
+%Learning curve with high loss spikes that excessively perturb a trainable parameter distribution. Losses decrease after loss spikes as parameters are updated back to an intelligent distribution. The learning curve is 2500 iteration boxcar averaged
+
+
+
+%\makeatletter
+%\newcommand{\linebreakand}{%
+%  \end{lign}
+%  \hfill\mbox{}\par
+%  \mbox{}\hfill\begin{@IEEEauthorhalign}
+%}
+%\makeatother
+%
+%\author{
+%  \IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+%  \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%    \textit{name of organization (of Aff.)}\\
+%    City, Country \\
+%    email address}
+%  \and
+%  \IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+%  \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%    \textit{name of organization (of Aff.)}\\
+%    City, Country \\
+%    email address}
+%  \and
+%  \IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+%  \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%    \textit{name of organization (of Aff.)}\\
+%    City, Country \\
+%    email address}
+%  \linebreakand % <------------- \and with a line-break
+%  \IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+%  \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%    \textit{name of organization (of Aff.)}\\
+%    City, Country \\
+%    email address}
+%  \and
+%  \IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
+%  \IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+%    \textit{name of organization (of Aff.)}\\
+%    City, Country \\
+%    email address}
+%}
+
+%    \bibliographystyle{IEEEtran}
+%    \bibliography{IEEEabrv,library}
+%$$\theta_t$,
